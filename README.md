@@ -1,1 +1,1 @@
-# css-made-simple
+css-simple

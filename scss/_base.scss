@@ -1,0 +1,69 @@
+// Default/base styling for the text elements
+
+html {
+  line-height: 23px;
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 0.025em;
+
+  @media (min-width: $xl-and-up) {
+    font-size: 16px;
+  }
+  
+  @media (max-width: $lg-and-down) {
+    font-size: 14px;
+  }
+  
+  @media (max-width: $md-and-down) {
+    font-size: 13px;
+  }
+  
+  @media (max-width: $sm-and-down) {
+    font-size: 12px;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+
+h1, .h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+h2, .h2 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5em;
+}
+
+h3, .h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+}
+
+h4, .h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25em;
+}
+
+h5, .h5 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25em;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+  margin-bottom: 0.125em
+}
+
+a {
+  text-decoration: none;
+}
+
+// HR
+hr {
+  border: 0;
+  height: 0.075em;
+  background: #fff;
+}
