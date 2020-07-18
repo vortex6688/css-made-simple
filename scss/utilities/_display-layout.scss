@@ -2,9 +2,10 @@
 
 // Content Of this document
 /********
-1) Flexbox utilities
+1) Flexbox Utilities
 2) Flexbox Sticky Footer Layout
-3) Grid Sticky Footer Layout
+3) Grid Utilities
+4) Grid Sticky Footer Layout
 ********/
 
 // 1) Flexbox utilities
@@ -54,11 +55,40 @@ so "display: flex" have to be present for any layout to work. */
 }
 
 // 2) Flexbox Sticky Footer Layout
-/* --- Flexbox sticky footer approach --- */
-// In order for this layout to work, class .stivky footer must be applied on the html, body tags and also body must contain 
-// an element (section or div) that also has a class .sticky-footer in order to push footer to the bottom of the page,
+/* --- Flexbox sticky footer utility --- */
+// In order for this layout to work, class .sticky footer must be applied on the html, body tags and also body must contain 
+// an element that has a class .sticky-footer-flex-content in order to push footer to the bottom of the page,
 // even if there is no content on the page, the footer will still be attached to the bottom of the page.
-html.sticky-footer {
+
+/* --- Flexbox sticky footer usage example --- */
+// In order for this layout to work, your html markup must follow the pattern illustrated below:
+
+/***********************************
+<html class="sticky-footer-flexbox">
+<body>
+
+  <header>
+    (header element is included only for demonstration purposes,
+    and does not have to be present in your html document,
+    since it will not affect flexbox sticky footer feature)
+  </header>
+
+  <section class="sticky-footer-flex-content">
+    (section tag could be replaced with a "div" or pretty much any other tag/element,
+    but absolutely must have the class="sticky-footer-flex-content" applied on it.
+    This element does not to be filled with any kind of content, and may remain empty if needed,
+    it will still push the "footer" to the bottom of the page)
+  </section>
+
+  <footer>
+    (footer will be pushed to the bottom of the page)
+  </footer>
+
+</body>
+</html>
+***********************************/
+
+html.sticky-footer-flexbox {
   height: 100%;
 
   // .sticky-footer class gives the body tag flex layout, column direction and minimum height 100% 
@@ -71,8 +101,7 @@ html.sticky-footer {
 
 // Content area
 // .sticky-footer class must be applied on the content section located inside your "body" tag, so it would push the footer to the bottom
-section.sticky-footer,
-div.sticky-footer {
+.sticky-footer-flex-content {
   display: flex;
   flex: 1 auto;
 }
@@ -82,7 +111,6 @@ div.sticky-footer {
 
 // Use .centered class to center content inside your content section tag vertically and horizontally
 .centered {
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -94,13 +122,20 @@ div.sticky-footer {
   text-align: center;
 }
 
+// 3) Grid Utilities
+/*Grid utility classes can only be used together with the ".grid" class,
+so "display: grid" have to be present for any layout to work. */
 
-// 3) Grid Sticky Footer Layout
-/* --- Grid sticky footer approach --- */
-// In order for this layout to work, all we need is to have a specified html template which is:
+.grid {
+  display: grid;
+}
+
+// 4) Grid Sticky Footer Layout
+/* --- Grid sticky footer utility --- */
+// In order for this layout to work, we need to follow the provided example:
 /*
 
-<html class="sticky-footer">
+<html class="sticky-footer-grid">
 <body>
 
   <header>
@@ -130,7 +165,7 @@ div.sticky-footer {
 // instead of what is showing above, or any orher tags really,
 // This utility class must be applied on the html element as illustrated above
 
-html.sticky-footer {
+html.sticky-footer-grid {
   height: 100%;
 
   body {
@@ -140,4 +175,4 @@ html.sticky-footer {
   }
 }
 
-/* --- Sticky Footer Layout Ends --- */
+/* --- Grid Sticky Footer Layout Ends --- */

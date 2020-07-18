@@ -1,5 +1,5 @@
 // Simply CSS by Vortex
-// v 1.0
+// v 1.1
 /********
   Please Do Not Override Any Styles In the documents that belong to Simply-css,
   place this CSS library in a separate folder ("vendor" for instance) and load first the desired
@@ -45,3 +45,20 @@ body {
 // md(medium) 640px - 1023px
 // sm(small) 320px - 639px
 // xs(extra small) 0 - 320px 
+
+// Version log:
+
+// v 1.0
+/********
+  Initial version
+********/
+
+// v 1.1
+/********
+  !!! Warning - updating the library to version 1.1 will break your page layout if flexbox sticky footer utility from version 1.0 was used,
+      So, to fix the issue, classnames applied to the "flex content element" have to be updated accordingle to the updated utility documentation
+
+  - Grid sticky footer was added to the utility/display-layout section
+  - Flebox sticky footer utility updated, class names changed, documentation was updated as well and reflects all the added changes
+
+********/

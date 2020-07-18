@@ -1,5 +1,10 @@
 // Suggested variation of list items decoration
 
+// ol base styling to align the numbers with the page borders
+ol {
+  padding: 0 1em;
+}
+
 // ul check styling 
 ul.check {
   li:before,
@@ -7,5 +12,17 @@ ul.check {
     content: '✓';
     padding-right: 0.5em;
     color: $green;
+  }
+}
+
+// ul exclamation/danger/attention styling 
+ul.attention {
+  li:before,
+  .li:before {
+    content: '!';
+    padding-right: 0.5em;
+    color: $red;
+    font-weight: 700;
+    font-size: 1.25rem;
   }
 }
