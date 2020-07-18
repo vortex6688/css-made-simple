@@ -406,6 +406,29 @@ html.sticky-footer-grid {
   margin-top: auto;
   margin-bottom: auto; }
 
+.m-0 {
+  margin: 0; }
+
+.mt-0 {
+  margin-top: 0; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.mr-0 {
+  margin-right: 0; }
+
+.ml-0 {
+  margin-left: 0; }
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0; }
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .m-05 {
   margin: 0.5em; }
 
@@ -593,5 +616,6 @@ body.white-font {
 
   - Grid sticky footer was added to the utility/display-layout section
   - Flebox sticky footer utility updated, class names changed, documentation was updated as well and reflects all the added changes
+  - components/list-styling section was updated
 
 ********/
